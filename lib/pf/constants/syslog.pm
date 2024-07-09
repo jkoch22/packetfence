@@ -208,7 +208,8 @@ our @SyslogInfo = (
         'description' => 'Firewall log',
         'name'       => 'firewall.log',
         'conditions' => [
-            '$programname == "firewalld"',
+             '$programname contains "firewalld"',
+             '$programname == "firewalld"',
         ]
     },
     {
